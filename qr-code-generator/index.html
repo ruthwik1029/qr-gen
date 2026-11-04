@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="card">
+    <h1>QR Code Generator</h1>
+    <p class="subtitle">Paste any URL (or text) and get a QR code instantly.</p>
+
+    <div class="input-row">
+      <input
+        type="text"
+        id="urlInput"
+        placeholder="https://example.com"
+        autocomplete="off"
+      />
+      <button id="generateBtn">Generate</button>
+    </div>
+
+    <p id="errorMsg" class="error-msg"></p>
+
+    <div id="qrWrapper" class="qr-wrapper hidden">
+      <div id="qrcode"></div>
+      <button id="downloadBtn" class="download-btn">Download PNG</button>
+    </div>
+  </div>
+
+  <!-- QR code generation library (loaded from CDN, runs fully in the browser) -->
+  <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
